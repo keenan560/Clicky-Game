@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function Main() {
-    return (
-        <div className='container mx-auto'>
 
-        </div>
-    );
+function Main(props) {
+    return <div className='wrapper mx-auto'>{props.children}</div>
 };
-
 
 
 export default Main;
