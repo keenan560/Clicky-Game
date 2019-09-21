@@ -9,8 +9,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .header {
-  background-color: lightsalmon;
+  background-color: lightseagreen;
   height: 300px;
+  color: white !important;
+  text-align: center;
+}
+
+.h2 {
+  color: purple !important;
+  font-weight: bold
 }
 
 code {

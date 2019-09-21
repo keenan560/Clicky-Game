@@ -1,0 +1,62 @@
+[
+    {   
+        "key": 1,
+        "name": "Arnold",
+        "image": "./images/arnold.png"
+    },
+    {
+        "key": 2,
+        "name": "Doug",
+        "image": "./images/doug.webp"
+    },
+    {
+        "key": 3,
+        "name": "Scooby",
+        "image": "./images/scooby.jpg"
+    },
+    {
+        "key": 4,
+        "name": "Chip",
+        "image": "./images/chip.jpg"
+    },
+    {
+        "key": 5,
+        "name": "Goku",
+        "image": "./images/goku.webp"
+    },
+    {
+        "key": 6,
+        "name": "Rocko",
+        "image": "./images/rocko.jpeg"
+    },
+    {
+        "key": 7,
+        "name": "Powder",
+        "image": "./images/powder.jpg"
+    },
+    {
+        "key": 8,
+        "name": "Vink",
+        "image": "./images/vink.jpeg"
+    },
+    {
+        "key": 9,
+        "name": "allthat",
+        "image": "./images/allthat.jpg"
+    },
+    {
+        "key": 10,
+        "name": "Batman",
+        "image": "./images/batman.jpeg"
+    },
+    {
+        "key": 11,
+        "name": "Zeke",
+        "image": "./images/zeke.jpg"
+    },
+    {
+        "key": 12,
+        "name": "Ninja",
+        "image": "./images/ninja.jpg"
+    }
+]
