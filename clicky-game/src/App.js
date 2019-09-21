@@ -14,12 +14,13 @@ class App extends React.Component {
     score: 0,
     topScore: 0
 
+
   };
 
   componentDidMount() {
 
     this.setState({ characters: characters })
-   
+    console.log(this.state.characters)
   }
 
 
@@ -34,6 +35,8 @@ class App extends React.Component {
             src={person.image}
             name={person.name}
             id={person.key}
+            clicked={person.clicked}
+            clickHandler={this.handleClick}
           />
 
         ))}

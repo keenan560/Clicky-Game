@@ -2,13 +2,15 @@ import React from 'react'
 
 
 
-function ClickItem({key, name, image, clickHandler}) {
+function ClickItem(props) {
     return (
-        <div className="container mx-auto">
-            <img className="mx-3 my-2"
-                src={image}
-                alt={name}
-                id={key}
+        <div className="container col-8 mx-auto">
+
+            <img className="img-thumbnail border border-danger mx-3 my-2"
+                alt={props.name}
+                src={props.image}
+                id={props.id}
+                onClick={props.clickHandler}
             />
         </div>
     )
