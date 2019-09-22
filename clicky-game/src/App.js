@@ -10,17 +10,46 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    characters: [],
+    cards: [],
     score: 0,
-    topScore: 0
+    topScore: 0,
+    clicked: [],
+    message: "Try your luck!"
 
 
   };
 
   componentDidMount() {
+    this.setState({ cards: characters });
+  }
 
-    this.setState({ characters: characters })
-    console.log(this.state.characters)
+  clickedImage = (id) => { 
+    const shuffled = this.shuffleCards(this.state.cards);
+    this.setState({ cards: shuffled})
+    if (this.state.clicked.includes(id)) {
+      this.setState({score: 0, clicked: [], message: "Ouch inccorrect! Better luck next time"})
+    } 
+    else {
+      this.setState({score: this.state.score +1, message: "Good job! Go again!", clicked: [id]})
+    }
+
+    if (this.state.score > this.state.topScore) {
+      this.setState({topScore: this.state.score});
+    }
+
+
+    this.setState(this.state.clicked, ()=> this.state.clicked.push(id));
+   
+    console.log('here', this.state.clicked)
+    console.log(this.state.score);
+
+  }
+
+
+
+
+  shuffleCards = (cards) => {
+    return cards.sort(() => Math.random() - 0.5);
   }
 
 
@@ -30,17 +59,20 @@ class App extends React.Component {
         <Navbar />
         <Header />
         <Main />
-        {this.state.characters.map(person => (
+        <h2 className='mx-auto text-center'>{this.state.message}</h2>
+        {characters.map(person => (
+
           <ClickItem
+            key={person.key}
             src={person.image}
             name={person.name}
             id={person.key}
             clicked={person.clicked}
-            clickHandler={this.handleClick}
+            clickHandler={this.clickedImage}
           />
 
         ))}
-      </div>
+      </div>    
     )
   }
 }
